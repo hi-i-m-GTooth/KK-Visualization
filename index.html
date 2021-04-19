@@ -67,7 +67,21 @@
                     </div>
                 </div>-->
                 <div id="result-frame" class="row">
-                    <div id="big-window" class="col-8">
+                    <div class="col-3">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a v-for="vod in now_vods" class="list-group-item list-group-item-action" :id="'list-'+vod.vid+'-list'" data-toggle="list" :href="'#list-'+vod.vid" role="tab" :aria-controls="vod.vid">
+                                <div class="media">
+                                <img :src="vod.img_url" class="img-thumbnail align-self-start mr-3" style="height: 100px;">
+                                <div class="media-body">
+                                    <h5 class="mt-0">[[vod.name]]</h5>
+                                    <p>[[vod.actor]]</p>
+                                </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="big-window" class="col-6">
                       <div class="tab-content" id="nav-tabContent" style="height: 100%;">
                         <div v-for="vod in now_vods" class="tab-pane fade" :id="'list-'+vod.vid" role="tabpanel" :aria-labelledby="'list-'+vod.vid+'-list'" style="height: 100%;">
                             <!--<div class="jumbotron" style="height: 70%;background-image: url('img/VOD/vod1.jpg');background-size: 100% 100%;"></div>-->
@@ -79,7 +93,7 @@
                       </div>
                     </div>
 
-                    <div class="col-4">
+                    <div class="col-3">
                         <div class="list-group" id="list-tab" role="tablist">
                             <a v-for="vod in now_vods" class="list-group-item list-group-item-action" :id="'list-'+vod.vid+'-list'" data-toggle="list" :href="'#list-'+vod.vid" role="tab" :aria-controls="vod.vid">
                                 <div class="media">
