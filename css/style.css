@@ -36,6 +36,10 @@ body{
     z-index: 0;
 }
 
+.dropdown-menu{
+  overflow-y: auto;
+}
+
 /* Navbar */
 
 .navbar{
